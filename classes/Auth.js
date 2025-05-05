@@ -1,3 +1,6 @@
+const { Customer } = require('./Customer.js');
+
+
 class Auth{
     constructor(customers){
         this.customers = [];
@@ -14,9 +17,11 @@ class Auth{
         if(customer){
             return customer;
         } else {
-            throw new Error("Customer not found");
+           return null;
         }
     }
    
 }
-module.exports = { Auth };
+module.exports = { 
+    Auth 
+};
